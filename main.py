@@ -137,6 +137,8 @@ async def scrape_yahoo_finance(symbol, max_retries=3):
                 continue
             else:
                 raise
+
+
 # NEW: add webhook functionality
 async def with_webhook(cor, webhook, retries=3):
     """execute corotine and send it to a webhook"""
@@ -165,6 +167,7 @@ async def scrape_stock(symbol: str, webhook: Optional[str] = None):
         return {"success": True, "webhook": webhook}
     else:
         return await scrape_cor
+
 # on API start - open up our scraper's http client connections
 @app.on_event("startup")
 async def app_startup():
