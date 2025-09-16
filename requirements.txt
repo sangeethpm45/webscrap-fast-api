@@ -22,6 +22,7 @@ pydantic_core==2.33.2
 annotated-types==0.7.0
 
 # Web scraping utilities
+crawl4ai==0.7.4
 parsel==1.10.0
 cssselect==1.3.0
 w3lib==2.3.1
